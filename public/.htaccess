@@ -1,0 +1,14 @@
+# Redireciona todas as requisições para o index.php (front controller)
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteBase /dashboard_chamado/public/
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule ^(.*)$ index.php?url=$1 [QSA,L]
+</IfModule>
+
+# Proteção: não listar diretórios
+Options -Indexes
+
+# Charset padrão
+AddDefaultCharset UTF-8

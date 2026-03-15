@@ -1,0 +1,8 @@
+# Dependências Composer
+/vendor/
+
+# Regras do editor (não versionar)
+.cursorrules
+
+# Ambiente e secrets (não versionar)
+/config/config.local.php
